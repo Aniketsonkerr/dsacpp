@@ -1,0 +1,7 @@
+{
+  "editor.inlineSuggest.edits.renderSideBySide": "never",
+  "editor.inlineSuggest.enabled": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.fontSize": 17,
+  "workbench.colorTheme": "Tomorrow Night Blue"
+}

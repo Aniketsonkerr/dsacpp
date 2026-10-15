@@ -1,5 +1,7 @@
 #include <iostream>
 #include <list>
+#include <queue>
+#include <vector>
 using namespace std;
 
 class Graph{
@@ -27,6 +29,24 @@ void printGraph(){
     }
 };
 
+void bsf(){
+queue<int> q;
+vector<bool> visted (v,false);
+q.push(1);
+visted[1]=true;
+while(q.size()>0){
+    int u = q.front();
+    q.pop();
+    cout<<u<<" ";
+    for(int vertex: l[u]){
+        if(!visted[vertex]){
+            visted[vertex]=true;
+            q.push(vertex);
+        };
+    };
+}
+}
+
 };
 
 int main(){
@@ -38,5 +58,6 @@ int main(){
     graph.insertVertex(4,5);
     graph.insertVertex(4,6);
     graph.printGraph();
+    graph.bsf();
     return 0;
 }
